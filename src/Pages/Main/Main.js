@@ -1,31 +1,50 @@
 import styled from 'styled-components';
+import KakaoLogin from '../../Components/Logins/KakaoLogin';
+import NaverLogin from '../../Components/Logins/NaverLogin';
 
 export default function Main() {
   return (
-    <FullContainer>
-      <BackImage src="/images/clothes.png" alt="clothes" />
-      <Logo src="/images/blackLogo.png" alt="logo" />
-    </FullContainer>
+    <BackImage>
+      <LoginContainer>
+        <Logo src="/images/blackLogo.png" alt="logo" />
+        <NaverLogin />
+        <KakaoLogin />
+      </LoginContainer>
+    </BackImage>
   );
 }
 
-const BackImage = styled.img`
-  width: 53%;
+const BackImage = styled.header`
+  ::before {
+    content: '';
+    opacity: 0.2;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: white;
+  }
+  height: 100vh;
+  background-image: url('/images/clothes.png');
+  /* flex-box thing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
 `;
 
 const Logo = styled.img`
   position: absolute;
   top: 50%;
   width: 20%;
+  z-index: 99;
 `;
 
-const FullContainer = styled.div`
+const LoginContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-`;
-
-const FirstMessage = styled.h1`
-  color: red;
 `;
