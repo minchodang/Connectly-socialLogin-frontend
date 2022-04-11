@@ -1,71 +1,55 @@
-# Getting Started with Create React App
+# Connectly 소셜 로그인 구현
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 시연 모습.
+![Kapture 2022-04-11 at 14 05 45](https://user-images.githubusercontent.com/90169703/162669691-6b6c5b03-8963-4f95-b723-cc3252520cdc.gif)
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+커넥틀리 소셜 로그인 구현 화면을 네이버와 카카오 소셜 로그인으로 구현해 봤습니다. 
 
-### `npm start`
+- 기간 : 22.04.05 ~ 22.04.11 (총 6일)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 레포지토리 주소
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Front-end Github](https://github.com/minchodang/Connectly-socialLogin-frontend)
+- [Back-end Github](https://github.com/minchodang/Connectly-socialLogin-backend)
 
-### `npm test`
+## CLONE 후 해당 프로젝트 실행 방법.
+- 1. git clone후, npm install을 통해 pakage.json 패키지 설치. 
+- 2. npm start를 통해 서버 시작 스크립트 실행.
+- 3. 브라우저에서 해당 페이지 확인. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 사용한 라이브러리
 
-### `npm run build`
+- [styled-media-query](https://www.npmjs.com/package/styled-media-query)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Front-end
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
 
-### `npm run eject`
+## 구현 기능.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[ Front-end ]
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<강민수>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. 메인 로그인 페이지 ui 구축.
+- 백그라운드 이미지를 전체 배경 이미지 css
+- 로그인 버튼 적용.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. 네이버 및 카카오 소셜 로그인 기능 구현. 
+- 네이버는 sdk 방식, 카카오는 rest api 방식으로 구현. 
+- 라우팅 기능 적용하여, 리다이렉트 uri 페이지를 통해 서버 통신 구현. 
+- 유즈 이펙트를 활용한 소셜서비스 서버 및 백엔드 서버 통신 fetch 로 구현. 
 
-## Learn More
+3. 다음 페이지 이동 및 버튼 구현. 
+- 토큰 발급 후, 유즈 네비게이트 활용한 다른 페이지 이동. 
+- 이후, 다시 해당 페이지 내에서 로그인 페이지로 이동하는 버튼 생성. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Contact Me
 
-### Code Splitting
+- 강민수 minsu910725@gmail.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Connectly-socialLogin-frontend
