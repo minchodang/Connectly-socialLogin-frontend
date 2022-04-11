@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import styled from 'styled-components';
+import { customMedia } from '../../styles/GlobalStyle';
 
 export default function NaverLogin() {
   const { naver } = window;
@@ -21,38 +22,26 @@ export default function NaverLogin() {
     });
     naverLogin.init();
   };
-
-  // const UserProfile = () => {
-  //   window.location.href.includes('access_token') && GetUser();
-  //   function GetUser() {
-  //     const location = window.location.href.split('=')[1];
-  //     const token = location.split('&')[0];
-  //     console.log('token: ', token);
-  //     // fetch(`${API}/account/sign-in`, {
-  //     //   method: 'GET',
-  //     //   headers: {
-  //     //     'Content-type': 'application/json',
-  //     //     Authorization: token,
-  //     //   },
-  //     // })
-  //     //   .then(res => res.json())
-  //     //   .then(res => {
-  //     //     localStorage.setItem('access_token', res.token);
-  //     //     setUserData({
-  //     //       nickname: res.nickname,
-  //     //       image: res.image,
-  //     //     });
-  //     //   })
-  //     //   .catch(err => console.log('err : ', err));
-  //   }
-  // };
-
   return <LoginLink onClick={Login} id="naverIdLogin" />;
 }
 
 const LoginLink = styled.button`
   all: unset;
   position: absolute;
-  top: 70%;
+  top: 65%;
   z-index: 99;
+
+  ${customMedia.greaterThan('desktop')`
+    all: unset;
+  position: absolute;
+  top: 65%;
+  z-index: 99;
+  `}
+
+  ${customMedia.lessThan('mobile')`
+    all: unset;
+    width:70%;
+    position: absolute;
+    top:65%;
+`}
 `;
