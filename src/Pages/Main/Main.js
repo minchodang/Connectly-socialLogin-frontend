@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import KakaoLogin from '../../Components/Logins/KakaoLogin';
 import NaverLogin from '../../Components/Logins/NaverLogin';
+import { customMedia } from '../../styles/GlobalStyle';
 
 export default function Main() {
   return (
@@ -40,6 +41,15 @@ const Logo = styled.img`
   top: 50%;
   width: 20%;
   z-index: 99;
+
+  ${customMedia.lessThan('tablet')`
+    width:70%;
+`}
+  ${customMedia.lessThan('mobile')`
+    width:70%;
+    position: absolute;
+    top: 40%;
+`}
 `;
 
 const LoginContainer = styled.div`
