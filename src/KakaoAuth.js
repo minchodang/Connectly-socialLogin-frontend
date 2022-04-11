@@ -33,7 +33,7 @@ export default function KakaoAuth() {
           .then(res => res.json())
           .then(data => sessionStorage.setItem('token', data.accessToken))
           .then(alert('connectly에 오신 것을 환영합니다😊'))
-          .then(navigate('/'))
+          .then(navigate('/nextpage'))
           .catch(err => console.log('err : ', err)),
       );
   }, [code]);
